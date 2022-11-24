@@ -10,14 +10,17 @@ public class RandomGenerator {
   private static String studentName1, studentName2;
   private static String pair;
   private static ArrayList<String> namePairing;
+  InitialWindow filePath;
 
   public RandomGenerator() {
     randomPairs = new ArrayList<String>();
     namePairing = new ArrayList<String>();
+    this.filePath = new InitialWindow();
   }
 
   public static void loadFiles() {
     try {
+
       File studentNames = new File("lib/students.txt");
       Scanner myReader = new Scanner(studentNames);
 
@@ -25,7 +28,6 @@ public class RandomGenerator {
         String data = myReader.nextLine();
         randomPairs.add(data);
       }
-
       myReader.close();
 
     } catch (FileNotFoundException error) {

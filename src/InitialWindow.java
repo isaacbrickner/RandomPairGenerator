@@ -2,7 +2,7 @@ import javax.swing.*;
 import java.awt.FlowLayout;
 import java.awt.event.*;
 
-public class InitialWindow implements ActionListener {
+public class InitialWindow extends JFrame implements ActionListener {
 
     private static JFrame initWindowFrame;
     private static JLabel initLabel;
@@ -10,7 +10,8 @@ public class InitialWindow implements ActionListener {
     private static ListOfPairs newWindow;
 
     public InitialWindow() {
-        initWindowFrame = new JFrame("Random Pair Generator"); // TODO: find scalable scren size method and or variable
+
+        initWindowFrame = new JFrame("Random Pair Generator");
         initLabel = new JLabel(InitialInput.initialPrompt(), SwingConstants.CENTER);
         yesButton = new JButton("Yes");
 

@@ -13,9 +13,9 @@ public class ListOfPairs extends InitialWindow {
     public ListOfPairs() {
         // create text panel and border
         textPanel = new JPanel();
-        textPanel.setBorder(new TitledBorder(new EtchedBorder(), "Display Area"));
+        textPanel.setBorder(new TitledBorder(new EtchedBorder(), "List of random pairs"));
         // create the display area where the text will reside with scroll bar component
-        display = new JTextArea("List: " + "\n", 25, 35);
+        display = new JTextArea(25, 35);
         append();
         display.setEditable(false);
         scroll = new JScrollPane(display);
@@ -31,6 +31,7 @@ public class ListOfPairs extends InitialWindow {
         frame.setSize(500, 500);
         frame.setBounds(getInitWindowFrame().getX(), 0, frame.getWidth(), frame.getHeight());
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
     }
 
     public static JPanel getTextPanel() {
@@ -41,6 +42,6 @@ public class ListOfPairs extends InitialWindow {
         for (int i = 0; i < RandomGenerator.getNamePairing().size(); i++) {
             display.append(RandomGenerator.getNamePairing().get(i));
         }
-
     }
+
 }
