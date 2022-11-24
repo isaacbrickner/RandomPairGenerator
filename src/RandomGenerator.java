@@ -8,16 +8,12 @@ public class RandomGenerator {
 
   private static ArrayList<String> randomPairs;
   private static String studentName1, studentName2;
-  private static ArrayList<String> pair;
-
-  public static void getPair() {
-    for (int i = 0; i <= pair.size(); i++) {
-      pair.get(i);
-    }
-  }
+  private static String pair;
+  private static ArrayList<String> namePairing;
 
   public RandomGenerator() {
     randomPairs = new ArrayList<String>();
+    namePairing = new ArrayList<String>();
   }
 
   public static void loadFiles() {
@@ -43,9 +39,14 @@ public class RandomGenerator {
     for (int i = 0; i < randomPairs.size(); i += 2) {
       studentName1 = randomPairs.get(i);
       studentName2 = randomPairs.get(i + 1);
-      pair.add(studentName1 + " and " + studentName2 + " is a pair \n");
+      pair = studentName1 + " and " + studentName2 + " is a pair \n";
+      namePairing.add(pair);
       System.out.println(studentName1 + " and " + studentName2 + " is a pair \n");
     }
+  }
+
+  public static ArrayList<String> getNamePairing() {
+    return namePairing;
   }
 
 }
