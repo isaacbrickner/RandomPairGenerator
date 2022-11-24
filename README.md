@@ -1,6 +1,8 @@
 ## Getting Started
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Version 1.0
+
+This program was intended to expidite the process of creating pairs for paired programming. To edit the selection of student names, modify the students.txt file accordingly.
 
 ## Folder Structure
 
